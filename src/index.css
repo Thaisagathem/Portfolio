@@ -1,0 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&family=Poppins:wght@100;600&family=Stardos+Stencil:wght@700&display=swap');
+
+body {
+  /* TODO: breakpoints for phone format */
+  background-color: #121F39;
+  color: #ffffff;
+}
