@@ -7,4 +7,11 @@ export const StyledVectors = styled.div`
   padding: 50px 0;
 `
 
+export const StyledVector = styled.a`
+  transition: transform .1s;
+  &:hover {
+    transform: scale(1.1);
+  }
+`
+
 export default StyledVectors;

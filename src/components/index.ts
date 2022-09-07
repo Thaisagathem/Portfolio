@@ -7,3 +7,5 @@ export * from './Vectors';
 export * from './Portrait';
 export * from './ContactLogos';
 export * from './ExperienceDetails';
+export * from './EmailButton';
+export * from './DownloadButton';

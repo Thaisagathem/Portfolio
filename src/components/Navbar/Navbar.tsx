@@ -1,19 +1,22 @@
-import React, { useState } from 'react'
-import {StyledNavbar, StyledUnorderedListItems, StyledListItem, StyledAnchor} from './Navbar.styled';
+import React from 'react';
+import {Link} from 'react-router-dom';
+import {StyledNavbar, StyledUnorderedListItems, StyledListItem, StyledText} from './Navbar.styled';
 import {Button} from '../'
 
-export const Navbar: React.FC = () => {
-// state for navbar current page
+interface Props {
+  currentPage: string;
+}
+
+export const Navbar: React.FC<Props> = ({currentPage}) => {
   return (
     <>
       <StyledNavbar>
         <StyledUnorderedListItems>
-          {/* change from a to Link */}
-            <StyledListItem><StyledAnchor href="/">Home</StyledAnchor></StyledListItem>
-            <StyledListItem><StyledAnchor href="/about">About</StyledAnchor></StyledListItem>
-            <StyledListItem><StyledAnchor href="/experience">Experience</StyledAnchor></StyledListItem>
+            <StyledListItem><Link to="/" style={{textDecoration: "none"}}><StyledText enabled={currentPage === '/' ? true : false}>Home</StyledText></Link></StyledListItem>
+            <StyledListItem><Link to="/about" style={{textDecoration: "none"}}><StyledText enabled={currentPage === '/about' ? true : false}>About</StyledText></Link></StyledListItem>
+            <StyledListItem><Link to="/experience" style={{textDecoration: "none"}}><StyledText enabled={currentPage === '/experience' ? true : false}>Experience</StyledText></Link></StyledListItem>
         </StyledUnorderedListItems>
-        <Button><StyledAnchor href="/contact">Contact</StyledAnchor></Button>
+        <Button><Link to="/contact" style={{textDecoration: "none"}}><StyledText enabled={currentPage === '/contact' ? true : false}>Contact</StyledText></Link></Button>
       </StyledNavbar>
     </>
   )

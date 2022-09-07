@@ -4,13 +4,14 @@ import {StyledLayout, StyledChildren} from './Layout.styled'
 
 interface Props {
   children: React.ReactNode;
+  currentPage: string;
 }
 
-export const Layout: React.FC<Props> = ({children}) => {
+export const Layout: React.FC<Props> = ({children, currentPage}) => {
 
   return (
     <StyledLayout>
-      <Navbar />
+      <Navbar currentPage={currentPage}/>
       <StyledChildren>
         {children}
       </StyledChildren>

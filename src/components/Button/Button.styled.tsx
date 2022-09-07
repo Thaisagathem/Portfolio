@@ -1,6 +1,9 @@
 import styled from 'styled-components';
 
 export const StyledButton = styled.button`
+  &:hover {
+    opacity: 100%;
+  }
   color: #ffffff;
   background-color: #314F7C;
   padding: 15px 50px;

@@ -6,7 +6,10 @@ export const Contact: React.FC = () => {
     <>
       <Portrait />
       <Heading alignment='center'>Thaïs Marie</Heading>
-      <Paragraph alignment='center'>+44 (0) 7771 452 807<br />thaisagathem@gmail.com</Paragraph>
+      <Paragraph alignment='center'>
+        <a href="tel:07771452807" style={{textDecoration: "none", color: "inherit"}}>+44 (0) 7771 452 807</a><br />
+        <a href="mailto:thaisagathem@gmail.com" style={{textDecoration: "none", color: "inherit"}}>thaisagathem@gmail.com</a>
+      </Paragraph>
       <ContactLogos />
     </>
   )
