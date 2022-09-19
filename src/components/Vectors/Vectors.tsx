@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import {StyledVectors, StyledVector} from './Vectors.styled';
 import reactNativeLogo from'../../assets/reactNativeLogo.png';
 import nodeLogo from'../../assets/nodeLogo.png';

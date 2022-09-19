@@ -5,18 +5,20 @@ import {Heading, Paragraph} from '../'
 interface Props {
   title: string;
   company: string;
-  timeframe: string;
+  timeframeStart: string;
+  timeframeEnd: string;
   description: string;
   reverse?: boolean;
 }
 
-export const ExperienceDetails: React.FC<Props> = ({title, company, timeframe, description, reverse = false}) => {
+export const ExperienceDetails: React.FC<Props> = ({title, company, timeframeStart, timeframeEnd, description, reverse = false}) => {
   return (
     <StyledExperienceDetails $reverse={reverse}>
       <StyledHeaders $reverse={reverse}>
         <Heading variant="h2">{title}</Heading>
         <Heading variant="h3">{company}</Heading>
-        <Heading variant="h3">{timeframe}</Heading>
+        <Heading variant="h3">{timeframeStart}</Heading>
+        <Heading variant="h3">{timeframeEnd}</Heading>
       </StyledHeaders>
       <StyledSpace />
       <StyledParagraph>
